@@ -9,9 +9,7 @@ const launchDate = "2026";
 
 let totalSeats = 100;
 
-console.log(
-    `${portalName} launched in ${launchDate}`
-);
+console.log(`${portalName} launched in ${launchDate}`);
 
 totalSeats++;
 
@@ -21,11 +19,11 @@ let allEvents = [];
    CLOSURE
 ----------------------------------- */
 
-function createRegistrationCounter(){
+function createRegistrationCounter() {
 
     let total = 0;
 
-    return function(){
+    return function () {
 
         total++;
 
@@ -34,56 +32,55 @@ function createRegistrationCounter(){
 }
 
 const registrationCounter =
-createRegistrationCounter();
+    createRegistrationCounter();
 
 /* -----------------------------------
    CLASS
 ----------------------------------- */
 
-class Event{
+class Event {
 
     constructor(
         name,
         category,
         date,
         seats
-    ){
+    ) {
+
         this.name = name;
         this.category = category;
         this.date = date;
         this.seats = seats;
     }
 
-    checkAvailability(){
+    checkAvailability() {
 
         return this.seats > 0;
     }
 }
 
 const demoEvent =
-new Event(
-    "Music Festival",
-    "Music",
-    "2026-08-15",
-    50
-);
+    new Event(
+        "Music Festival",
+        "Music",
+        "2026-08-15",
+        50
+    );
 
-console.log(
-    Object.entries(demoEvent)
-);
+console.log(Object.entries(demoEvent));
 
 /* -----------------------------------
    FUNCTIONS
 ----------------------------------- */
 
-function addEvent(event){
+function addEvent(event) {
 
     allEvents.push(event);
 }
 
-function registerUser(eventName){
+function registerUser(eventName) {
 
-    try{
+    try {
 
         alert(
             `Registered for ${eventName}`
@@ -95,7 +92,7 @@ function registerUser(eventName){
         );
 
     }
-    catch(error){
+    catch (error) {
 
         console.log(error);
     }
@@ -104,13 +101,13 @@ function registerUser(eventName){
 function filterEventsByCategory(
     category,
     callback
-){
+) {
 
     const filtered =
-    allEvents.filter(
-        event =>
-        event.category === category
-    );
+        allEvents.filter(
+            event =>
+                event.category === category
+        );
 
     callback(filtered);
 }
@@ -120,48 +117,48 @@ function filterEventsByCategory(
 ----------------------------------- */
 
 document
-.getElementById("loading")
-.style.display = "block";
+    .getElementById("loading")
+    .style.display = "block";
 
 fetch("data/events.json")
 
-.then(response => response.json())
+    .then(response => response.json())
 
-.then(data => {
+    .then(data => {
 
-    allEvents = [...data];
+        allEvents = [...data];
 
-    document
-    .getElementById("loading")
-    .style.display = "none";
+        document
+            .getElementById("loading")
+            .style.display = "none";
 
-    displayEvents(allEvents);
+        displayEvents(allEvents);
 
-})
+    })
 
-.catch(error => {
+    .catch(error => {
 
-    console.log(error);
+        console.log(error);
 
-});
+    });
 
 /* -----------------------------------
    DISPLAY EVENTS
 ----------------------------------- */
 
-function displayEvents(events){
+function displayEvents(events) {
 
     const container =
-    document.querySelector(
-        "#eventsContainer"
-    );
+        document.querySelector(
+            "#eventsContainer"
+        );
 
     container.innerHTML = "";
 
     events.forEach(event => {
 
         const card =
-        document.createElement("div");
+            document.createElement("div");
 
         card.classList.add(
             "event-card"
@@ -207,154 +204,181 @@ function displayEvents(events){
 ----------------------------------- */
 
 document
-.getElementById("categoryFilter")
-.addEventListener("change", function(){
+    .getElementById("categoryFilter")
+    .addEventListener("change", function () {
 
-    const category =
-    this.value;
+        const category =
+            this.value;
 
-    if(category === "All"){
+        if (category === "All") {
 
-        displayEvents(allEvents);
+            displayEvents(allEvents);
 
-        return;
-    }
+            return;
+        }
 
-    filterEventsByCategory(
-        category,
-        displayEvents
-    );
-});
+        filterEventsByCategory(
+            category,
+            displayEvents
+        );
+    });
 
 /* -----------------------------------
    SEARCH
 ----------------------------------- */
 
 document
-.getElementById("searchInput")
-.addEventListener("keyup", function(){
+    .getElementById("searchInput")
+    .addEventListener("keyup", function () {
 
-    const keyword =
-    this.value.toLowerCase();
+        const keyword =
+            this.value.toLowerCase();
 
-    const filtered =
-    allEvents.filter(event =>
-        event.name
-        .toLowerCase()
-        .includes(keyword)
-    );
+        const filtered =
+            allEvents.filter(event =>
+                event.name
+                    .toLowerCase()
+                    .includes(keyword)
+            );
 
-    displayEvents(filtered);
-});
+        displayEvents(filtered);
+    });
 
 /* -----------------------------------
-   FORM
+   FORM SUBMISSION
 ----------------------------------- */
 
 document
-.getElementById("registrationForm")
-.addEventListener(
-"submit",
-function(e){
+    .getElementById("registrationForm")
+    .addEventListener(
+        "submit",
+        function (e) {
 
-    e.preventDefault();
+            e.preventDefault();
 
-    const name =
-    this.elements["name"].value;
+            const name =
+                this.elements["name"].value;
 
-    const email =
-    this.elements["email"].value;
+            const email =
+                this.elements["email"].value;
 
-    const event =
-    this.elements["event"].value;
+            const event =
+                this.elements["event"].value;
 
-    if(
-        name === "" ||
-        email === "" ||
-        event === ""
-    ){
+            console.log(
+                "Form Submission Started"
+            );
 
-        document
-        .getElementById("message")
-        .innerText =
-        "Please fill all fields";
+            console.log(
+                "Name:",
+                name
+            );
 
-        return;
-    }
+            console.log(
+                "Email:",
+                email
+            );
 
-    document
-    .getElementById("message")
-    .innerText =
-    `Thank you ${name}. Registration Successful`;
-
-    fetch(
-        "https://jsonplaceholder.typicode.com/posts",
-        {
-            method:"POST",
-
-            body:JSON.stringify({
-                name,
-                email,
+            console.log(
+                "Event:",
                 event
-            }),
+            );
 
-            headers:{
-                "Content-Type":
-                "application/json"
+            if (
+                name === "" ||
+                email === "" ||
+                event === ""
+            ) {
+
+                document
+                    .getElementById("message")
+                    .innerText =
+                    "Please fill all fields";
+
+                return;
             }
-        }
-    )
 
-    .then(response =>
-        response.json()
-    )
+            document
+                .getElementById("message")
+                .innerText =
+                `Thank you ${name}. Registration Successful`;
 
-    .then(data => {
+            console.log(
+                "Sending Registration Request..."
+            );
 
-        console.log(
-            "Registration Sent"
-        );
+            fetch(
+                "https://jsonplaceholder.typicode.com/posts",
+                {
+                    method: "POST",
 
-        console.log(data);
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        event
+                    }),
 
-    })
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    }
+                }
+            )
 
-    .catch(error => {
+                .then(response =>
+                    response.json()
+                )
 
-        console.log(error);
+                .then(data => {
 
-    });
+                    console.log(
+                        "Server Response:"
+                    );
 
-});
+                    console.log(data);
+
+                })
+
+                .catch(error => {
+
+                    console.error(
+                        "Registration Failed"
+                    );
+
+                    console.error(error);
+
+                });
+
+        });
 
 /* -----------------------------------
    GEOLOCATION
 ----------------------------------- */
 
 document
-.getElementById("locationBtn")
-.addEventListener(
-"click",
-getLocation
-);
+    .getElementById("locationBtn")
+    .addEventListener(
+        "click",
+        getLocation
+    );
 
-function getLocation(){
+function getLocation() {
 
     navigator.geolocation
-    .getCurrentPosition(
+        .getCurrentPosition(
 
-        success,
+            success,
 
-        error,
+            error,
 
-        {
-            enableHighAccuracy:true,
-            timeout:5000
-        }
-    );
+            {
+                enableHighAccuracy: true,
+                timeout: 5000
+            }
+        );
 }
 
-function success(position){
+function success(position) {
 
     const {
         latitude,
@@ -362,20 +386,42 @@ function success(position){
     } = position.coords;
 
     document
-    .getElementById(
-        "locationResult"
-    )
-    .innerText =
-    `Latitude: ${latitude}
-     Longitude: ${longitude}`;
+        .getElementById(
+            "locationResult"
+        )
+        .innerText =
+        `Latitude: ${latitude}
+Longitude: ${longitude}`;
 }
 
-function error(err){
+function error(err) {
 
     document
-    .getElementById(
-        "locationResult"
-    )
-    .innerText =
-    err.message;
+        .getElementById(
+            "locationResult"
+        )
+        .innerText =
+        err.message;
 }
+
+/* -----------------------------------
+   JQUERY
+----------------------------------- */
+
+$(document).ready(function () {
+
+    $("#registerBtn").click(function () {
+
+        console.log(
+            "Register Button Clicked using jQuery"
+        );
+
+    });
+
+    $("#toggleEvents").click(function () {
+
+        $("#eventsContainer").fadeToggle();
+
+    });
+
+});
