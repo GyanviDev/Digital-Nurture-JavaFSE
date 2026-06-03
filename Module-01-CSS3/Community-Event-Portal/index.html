@@ -3,152 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Event Management Dashboard</title>
+    <title>Community Event Dashboard</title>
+
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-<div class="container">
+<div class="sidebar">
 
-    <aside class="sidebar">
-        <h2>Community Portal</h2>
+    <div class="logo">
+        <h2>CommunityHub</h2>
+    </div>
 
-        <ul>
-            <li>Dashboard</li>
-            <li>Events</li>
-            <li>Registrations</li>
-            <li>Volunteers</li>
-            <li>Venues</li>
-            <li>Reports</li>
-        </ul>
-    </aside>
+    <ul>
+        <li class="active">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </li>
 
-    <main class="main-content">
+        <li>
+            <i class="fa-solid fa-calendar-days"></i>
+            Events
+        </li>
 
-        <header class="topbar">
-            <h1>Community Event Management Dashboard</h1>
-            <button>New Event</button>
-        </header>
+        <li>
+            <i class="fa-solid fa-users"></i>
+            Volunteers
+        </li>
 
-        <section class="stats">
+        <li>
+            <i class="fa-solid fa-ticket"></i>
+            Registrations
+        </li>
 
-            <div class="card">
-                <h3>24</h3>
-                <p>Upcoming Events</p>
+        <li>
+            <i class="fa-solid fa-location-dot"></i>
+            Venues
+        </li>
+
+        <li>
+            <i class="fa-solid fa-chart-pie"></i>
+            Reports
+        </li>
+    </ul>
+
+</div>
+
+<div class="main">
+
+    <div class="header">
+
+        <div class="title-section">
+            <h1>Community Event Dashboard</h1>
+            <p>Manage events, volunteers and registrations efficiently.</p>
+        </div>
+
+        <button class="new-event-btn">
+            + New Event
+        </button>
+
+    </div>
+
+    <div class="search-row">
+        <input
+            type="text"
+            placeholder="Search events, registrations, volunteers...">
+    </div>
+
+    <div class="stats">
+
+        <div class="card blue">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h2>24</h2>
+            <p>Upcoming Events</p>
+        </div>
+
+        <div class="card green">
+            <i class="fa-solid fa-users"></i>
+            <h2>1,280</h2>
+            <p>Registrations</p>
+        </div>
+
+        <div class="card orange">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <h2>85</h2>
+            <p>Volunteers</p>
+        </div>
+
+        <div class="card purple">
+            <i class="fa-solid fa-location-dot"></i>
+            <h2>12</h2>
+            <p>Venues</p>
+        </div>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="events">
+
+            <h2>Featured Events</h2>
+
+            <div class="event-card">
+                <h3>Music Festival</h3>
+                <span>15 June • Town Hall</span>
+                <p>
+                    Live performances by local artists and cultural groups.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>1,280</h3>
-                <p>Registrations</p>
+            <div class="event-card">
+                <h3>Food Carnival</h3>
+                <span>20 June • Central Park</span>
+                <p>
+                    Food stalls featuring regional and international cuisine.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>85</h3>
-                <p>Volunteers</p>
+            <div class="event-card">
+                <h3>Charity Marathon</h3>
+                <span>25 June • City Stadium</span>
+                <p>
+                    Community marathon promoting health and fundraising.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>12</h3>
-                <p>Venues</p>
-            </div>
+        </div>
 
-        </section>
+        <div class="analytics">
 
-        <section class="dashboard-grid">
+            <h2>Registration Trend</h2>
 
-            <div class="table-section">
+            <div class="chart">
 
-                <h2>Upcoming Events</h2>
-
-                <table>
-
-                    <tr>
-                        <th>Event</th>
-                        <th>Date</th>
-                        <th>Venue</th>
-                        <th>Status</th>
-                    </tr>
-
-                    <tr>
-                        <td>Music Festival</td>
-                        <td>15 June</td>
-                        <td>Town Hall</td>
-                        <td><span class="active">Open</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Food Carnival</td>
-                        <td>20 June</td>
-                        <td>Central Park</td>
-                        <td><span class="active">Open</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Charity Marathon</td>
-                        <td>25 June</td>
-                        <td>City Stadium</td>
-                        <td><span class="pending">Limited</span></td>
-                    </tr>
-
-                </table>
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+                <div class="bar bar4"></div>
+                <div class="bar bar5"></div>
 
             </div>
 
-            <div class="announcement-section">
-
-                <h2>Announcements</h2>
-
-                <div class="announcement">
-                    Volunteer registration closes on June 10.
-                </div>
-
-                <div class="announcement">
-                    New cultural workshop added to event calendar.
-                </div>
-
-                <div class="announcement">
-                    Marathon route updated by local authorities.
-                </div>
-
+            <div class="months">
+                <span>Jan</span>
+                <span>Feb</span>
+                <span>Mar</span>
+                <span>Apr</span>
+                <span>May</span>
             </div>
 
-        </section>
+        </div>
 
-        <section class="registration-section">
+    </div>
 
-            <h2>Recent Registrations</h2>
+    <div class="bottom-grid">
 
-            <table>
+        <div class="activity">
 
-                <tr>
-                    <th>Name</th>
-                    <th>Event</th>
-                    <th>Status</th>
-                </tr>
+            <h2>Recent Activity</h2>
 
-                <tr>
-                    <td>Rahul Sharma</td>
-                    <td>Music Festival</td>
-                    <td>Confirmed</td>
-                </tr>
+            <ul>
+                <li>Rahul Sharma registered for Music Festival</li>
+                <li>New venue added at Central Park</li>
+                <li>Volunteer registration updated</li>
+                <li>Food Carnival schedule modified</li>
+            </ul>
 
-                <tr>
-                    <td>Ananya Singh</td>
-                    <td>Food Carnival</td>
-                    <td>Confirmed</td>
-                </tr>
+        </div>
 
-                <tr>
-                    <td>Karan Verma</td>
-                    <td>Marathon</td>
-                    <td>Pending</td>
-                </tr>
+        <div class="announcements">
 
-            </table>
+            <h2>Announcements</h2>
 
-        </section>
+            <div class="notice">
+                Volunteer registration closes on June 10.
+            </div>
 
-    </main>
+            <div class="notice">
+                New workshop added to event calendar.
+            </div>
+
+            <div class="notice">
+                Marathon route updated by authorities.
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
