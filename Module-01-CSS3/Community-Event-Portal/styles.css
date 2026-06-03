@@ -18,12 +18,6 @@ body{
 
     background-color:#f5f5f5;
 
-    background-image:url("https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-
     padding:30px;
 }
 
@@ -51,74 +45,102 @@ body{
 }
 
 /* ===================================
-   Heading Styling
+   Navigation Links
 =================================== */
 
-h2{
+nav{
 
-    color:#1565c0;
+    margin-top:15px;
+}
 
-    font-size:28px;
+nav a{
 
-    margin-bottom:10px;
+    color:white;
+
+    text-decoration:none;
+
+    margin:15px;
+
+    font-weight:bold;
+}
+
+nav a:hover{
+
+    color:yellow;
 }
 
 /* ===================================
-   Event Card Styling
+   Event Card
 =================================== */
 
 .eventCard{
 
-    background:rgba(255,255,255,0.90);
+    background:white;
 
     padding:25px;
 
     margin-bottom:25px;
 
-    border-radius:12px;
+    border:2px solid #1565c0;
 
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    outline:3px solid #d9e8ff;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* ===================================
-   Typography Styling
+   Lists
 =================================== */
 
-.description{
+ul{
 
-    text-align:justify;
+    margin-top:15px;
 
-    text-transform:capitalize;
+    padding-left:30px;
+}
 
-    letter-spacing:1px;
+li{
 
-    line-height:1.8;
-
-    color:#444;
+    margin-bottom:10px;
 }
 
 /* ===================================
-   Button Styling
+   Table Styling
 =================================== */
 
-.cta-button{
+table{
 
-    background-color:#007BFF;
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:15px;
+}
+
+th,
+td{
+
+    border:1px solid #ccc;
+
+    padding:12px;
+
+    text-align:center;
+}
+
+th{
+
+    background:#1565c0;
 
     color:white;
-
-    border:none;
-
-    padding:12px 20px;
-
-    border-radius:6px;
-
-    font-weight:600;
-
-    cursor:pointer;
 }
 
-.cta-button:hover{
+/* ===================================
+   Hidden Element
+=================================== */
 
-    background-color:#0056b3;
+.hiddenBox{
+
+    visibility:hidden;
 }
