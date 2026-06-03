@@ -3,125 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Community Event Portal</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <title>Community Event Portal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header id="mainHeader">
+    <header>
+        <div class="hero-content">
+            <h1>Community Event Portal</h1>
+            <p>Connecting people through events, culture, learning and collaboration.</p>
 
-        <h1>Local Community Event Portal</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Events</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </nav>
 
-        <p class="tagline">
-            A platform for community engagement and local events
-        </p>
-
-        <nav>
-
-            <a href="#">Home</a>
-            <a href="#">Events</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
-
-        </nav>
-
+            <button class="hero-btn">Explore Events</button>
+        </div>
     </header>
 
-    <section class="eventCard">
+    <section class="stats">
+        <div class="stat-card">
+            <h2>120+</h2>
+            <p>Events Organized</p>
+        </div>
 
+        <div class="stat-card">
+            <h2>15K+</h2>
+            <p>Participants</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>50+</h2>
+            <p>Volunteers</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>25+</h2>
+            <p>Communities</p>
+        </div>
+    </section>
+
+    <section class="events">
         <h2>Upcoming Events</h2>
 
         <div class="event-grid">
 
-            <div class="mini-card">
+            <div class="event-card">
+                <span class="tag">Music</span>
                 <h3>Community Music Festival</h3>
-                <p>
-                    Live performances by local artists and cultural groups.
-                </p>
+                <p>Experience live performances from local artists and cultural groups.</p>
+                <button>View Details</button>
             </div>
 
-            <div class="mini-card">
+            <div class="event-card">
+                <span class="tag">Food</span>
                 <h3>Food Carnival</h3>
-                <p>
-                    Food stalls featuring regional and international cuisine.
-                </p>
+                <p>Explore regional cuisines and culinary experiences.</p>
+                <button>View Details</button>
             </div>
 
-            <div class="mini-card">
+            <div class="event-card">
+                <span class="tag">Health</span>
                 <h3>Charity Marathon</h3>
-                <p>
-                    A community-driven event promoting health and fundraising.
-                </p>
+                <p>Join a city-wide marathon promoting fitness and fundraising.</p>
+                <button>View Details</button>
             </div>
 
         </div>
-
     </section>
 
-    <section class="eventCard">
-
+    <section class="schedule-section">
         <h2>Event Schedule</h2>
 
         <table>
-
             <tr>
                 <th>Event</th>
                 <th>Date</th>
                 <th>Location</th>
+                <th>Status</th>
             </tr>
 
             <tr>
                 <td>Music Festival</td>
                 <td>15 June</td>
                 <td>Town Hall</td>
+                <td><span class="status active">Open</span></td>
             </tr>
 
             <tr>
                 <td>Food Carnival</td>
                 <td>20 June</td>
                 <td>Central Park</td>
+                <td><span class="status active">Open</span></td>
             </tr>
 
             <tr>
                 <td>Charity Marathon</td>
                 <td>25 June</td>
                 <td>City Stadium</td>
+                <td><span class="status pending">Limited</span></td>
             </tr>
 
         </table>
-
     </section>
 
-    <section class="eventCard">
+    <section class="news-section">
+        <h2>Latest Community Updates</h2>
 
-        <h2>Community News</h2>
+        <div class="news-grid">
 
-        <div class="news-columns">
+            <div class="news-card">
+                <h3>New Sports Complex</h3>
+                <p>The city council has approved development of a modern sports facility.</p>
+            </div>
 
-            Our community continues to expand through educational programs,
-            cultural festivals, environmental initiatives, sports events,
-            and volunteer opportunities. These activities encourage
-            collaboration among residents and strengthen community
-            participation.
+            <div class="news-card">
+                <h3>Volunteer Program</h3>
+                <p>Community members can now register for upcoming volunteering initiatives.</p>
+            </div>
 
-            Local authorities are also introducing new public facilities
-            and engagement programs aimed at improving accessibility,
-            recreation, and overall quality of life for citizens across
-            the region.
+            <div class="news-card">
+                <h3>Environmental Campaign</h3>
+                <p>Awareness drives and sustainability workshops begin next month.</p>
+            </div>
 
         </div>
-
     </section>
 
     <footer>
-
-        <p>
-            © 2026 Local Community Event Portal
-        </p>
-
+        <h3>Community Event Portal</h3>
+        <p>Building stronger communities through participation and collaboration.</p>
     </footer>
 
 </body>

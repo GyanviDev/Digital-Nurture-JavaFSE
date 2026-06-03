@@ -1,241 +1,261 @@
-/* ===================================
-   Global Styles
-=================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-
-    font-family:'Poppins',sans-serif;
-
-    background-color:#f4f6f9;
-
-    padding:30px;
-
-    color:#333;
+    background:#f5f7fb;
+    color:#222;
 }
 
-/* ===================================
-   Header
-=================================== */
+/* Hero Section */
 
-#mainHeader{
+header{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    background:linear-gradient(
-        135deg,
-        #1e3c72,
-        #2a5298
-    );
+    background:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url("https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80");
 
-    color:white;
+    background-size:cover;
+    background-position:center;
+}
 
+.hero-content{
     text-align:center;
+    color:white;
+}
 
-    padding:50px 20px;
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
 
-    border-radius:15px;
-
+.hero-content p{
+    font-size:1.2rem;
     margin-bottom:30px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-#mainHeader h1{
-
-    margin-bottom:10px;
+nav{
+    margin-bottom:30px;
 }
-
-.tagline{
-
-    font-weight:300;
-
-    margin-bottom:20px;
-}
-
-/* ===================================
-   Navigation
-=================================== */
 
 nav a{
-
     text-decoration:none;
-
     color:white;
-
     margin:0 15px;
-
     font-weight:500;
-
-    transition:0.3s;
 }
 
-nav a:hover{
-
-    color:#d6e4ff;
-}
-
-/* ===================================
-   Cards
-=================================== */
-
-.eventCard{
-
+.hero-btn{
+    padding:14px 32px;
+    border:none;
     background:white;
-
-    margin-bottom:30px;
-
-    padding:30px;
-
-    border-radius:15px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    color:#1d4ed8;
+    font-size:16px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
 }
 
-.eventCard h2{
+.hero-btn:hover{
+    transform:translateY(-4px);
+}
 
+/* Stats */
+
+.stats{
+    max-width:1200px;
+    margin:-60px auto 50px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:0 20px;
+}
+
+.stat-card{
+    background:white;
+    text-align:center;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.stat-card h2{
+    color:#2563eb;
+    font-size:2rem;
+}
+
+/* Events */
+
+.events{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.events h2{
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.event-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.event-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.event-card:hover{
+    transform:translateY(-10px);
+}
+
+.tag{
+    background:#dbeafe;
+    color:#1e40af;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.event-card h3{
+    margin:15px 0;
+}
+
+.event-card p{
+    color:#555;
     margin-bottom:20px;
 }
 
-/* ===================================
-   Event Grid
-=================================== */
-
-.event-grid{
-
-    display:flex;
-
-    gap:20px;
-
-    flex-wrap:wrap;
+.event-card button{
+    padding:10px 20px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
 }
 
-.mini-card{
+/* Table */
 
-    flex:1;
-
-    min-width:250px;
-
-    padding:20px;
-
-    background:#f8f9fb;
-
-    border-left:4px solid #2a5298;
-
-    border-radius:10px;
-
-    transition:0.3s;
+.schedule-section{
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 20px;
 }
 
-.mini-card:hover{
-
-    transform:translateY(-3px);
+.schedule-section h2{
+    margin-bottom:20px;
 }
-
-.mini-card h3{
-
-    margin-bottom:10px;
-}
-
-/* ===================================
-   Table
-=================================== */
 
 table{
-
     width:100%;
-
     border-collapse:collapse;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 th{
-
-    background:#2a5298;
-
+    background:#1e40af;
     color:white;
 }
 
-th,
-td{
-
-    border:1px solid #ddd;
-
-    padding:14px;
-
+th,td{
+    padding:18px;
     text-align:center;
 }
 
 tr:nth-child(even){
-
-    background:#f8f8f8;
+    background:#f8fafc;
 }
 
-/* ===================================
-   Multi Column Layout
-=================================== */
-
-.news-columns{
-
-    column-count:2;
-
-    column-gap:40px;
-
-    column-rule:1px solid #ccc;
-
-    line-height:1.8;
-
-    text-align:justify;
+.status{
+    padding:6px 12px;
+    border-radius:20px;
+    color:white;
+    font-size:12px;
 }
 
-/* ===================================
-   Footer
-=================================== */
+.active{
+    background:#16a34a;
+}
+
+.pending{
+    background:#f59e0b;
+}
+
+/* News */
+
+.news-section{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.news-section h2{
+    margin-bottom:25px;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.news-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.news-card h3{
+    margin-bottom:10px;
+}
+
+/* Footer */
 
 footer{
-
-    text-align:center;
-
-    background:#222;
-
+    margin-top:60px;
+    background:#0f172a;
     color:white;
-
-    padding:20px;
-
-    border-radius:10px;
+    text-align:center;
+    padding:40px;
 }
 
-/* ===================================
-   Responsive Design
-=================================== */
+/* Responsive */
 
 @media(max-width:768px){
 
-    body{
-        padding:15px;
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
     }
 
     nav a{
-
         display:block;
-
-        margin:10px 0;
-    }
-
-    .news-columns{
-
-        column-count:1;
-    }
-
-    .event-grid{
-
-        flex-direction:column;
-    }
-
-    table{
-
-        font-size:14px;
+        margin:10px;
     }
 }
