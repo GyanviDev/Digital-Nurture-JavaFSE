@@ -1,0 +1,211 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* HEADER */
+
+header{
+    background:#1e3a8a;
+    color:white;
+    padding:25px;
+}
+
+header h1{
+    text-align:center;
+}
+
+.top-controls{
+    margin-top:20px;
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.top-controls input,
+.top-controls select{
+    padding:12px;
+    width:250px;
+}
+
+/* WELCOME */
+
+.welcome-section{
+    text-align:center;
+    padding:40px;
+}
+
+/* EVENTS */
+
+.events-section{
+    padding:40px;
+}
+
+.events-section h2{
+    margin-bottom:25px;
+}
+
+#eventsContainer{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+}
+
+.event-card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,.1);
+
+    transition:.3s;
+}
+
+.event-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.event-card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.event-card p{
+    margin-bottom:8px;
+}
+
+.register-btn{
+
+    margin-top:10px;
+
+    padding:10px 15px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    border-radius:5px;
+}
+
+/* LOCATION */
+
+.location-section{
+
+    text-align:center;
+
+    padding:40px;
+}
+
+#locationBtn{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:5px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+#locationResult{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* FORM */
+
+.registration-section{
+    padding:40px;
+}
+
+#registrationForm{
+
+    max-width:500px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+#registrationForm input,
+#registrationForm select{
+
+    padding:12px;
+}
+
+#registrationForm button{
+
+    padding:12px;
+
+    background:#16a34a;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+}
+
+#message{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    padding:20px;
+
+    background:#111827;
+
+    color:white;
+}
+
+/* LOADING */
+
+#loading{
+
+    text-align:center;
+
+    font-size:18px;
+
+    margin-bottom:20px;
+}

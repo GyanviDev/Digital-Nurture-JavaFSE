@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Community Event Portal</h1>
+
+        <div class="top-controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Event">
+
+            <select id="categoryFilter">
+
+                <option value="All">All Categories</option>
+                <option value="Music">Music</option>
+                <option value="Food">Food</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Sports">Sports</option>
+
+            </select>
+
+        </div>
+    </header>
+
+    <section class="welcome-section">
+
+        <h2>Welcome to the Community Portal</h2>
+
+        <p>
+            Find and register for upcoming community events.
+        </p>
+
+    </section>
+
+    <section class="events-section">
+
+        <h2>Upcoming Events</h2>
+
+        <div id="loading">
+            Loading events...
+        </div>
+
+        <div id="eventsContainer"></div>
+
+    </section>
+
+    <section class="location-section">
+
+        <h2>Find Nearby Events</h2>
+
+        <button id="locationBtn">
+            Find Nearby Events
+        </button>
+
+        <p id="locationResult"></p>
+
+    </section>
+
+    <section class="registration-section">
+
+        <h2>Event Registration</h2>
+
+        <form id="registrationForm">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter Name">
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter Email">
+
+            <select name="event">
+
+                <option value="">
+                    Select Event
+                </option>
+
+                <option>
+                    Music Festival
+                </option>
+
+                <option>
+                    Food Carnival
+                </option>
+
+                <option>
+                    Technology Workshop
+                </option>
+
+                <option>
+                    Charity Marathon
+                </option>
+
+            </select>
+
+            <button type="submit" id="registerBtn">
+                Register
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+    <footer>
+
+        <p>
+            © 2026 Community Event Portal
+        </p>
+
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

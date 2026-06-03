@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Music Festival",
+    "category": "Music",
+    "date": "2026-08-15",
+    "seats": 50
+  },
+  {
+    "id": 2,
+    "name": "Food Carnival",
+    "category": "Food",
+    "date": "2026-09-10",
+    "seats": 35
+  },
+  {
+    "id": 3,
+    "name": "Technology Workshop",
+    "category": "Workshop",
+    "date": "2026-10-05",
+    "seats": 25
+  },
+  {
+    "id": 4,
+    "name": "Charity Marathon",
+    "category": "Sports",
+    "date": "2026-11-01",
+    "seats": 40
+  }
+]
