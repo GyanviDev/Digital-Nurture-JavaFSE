@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Event Portal</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 
     <style>
         #welcomeBanner {
-            background: #2563eb;
+            background-color: #2563eb;
             color: white;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
         }
 
         .highlight {
-            background: #fff3cd;
-            padding: 4px 8px;
+            background-color: #fff3cd;
+            padding: 5px 10px;
             border-radius: 5px;
         }
     </style>
@@ -31,7 +31,9 @@
     <!-- Navigation -->
 
     <nav>
-        <h2>Community Event Portal</h2>
+        <div class="logo">
+            <h2>Community Event Portal</h2>
+        </div>
 
         <ul>
             <li><a href="#home">Home</a></li>
@@ -51,11 +53,11 @@
             <h1>Welcome to the Community Event Portal</h1>
 
             <p>
-                Discover events, connect with residents and participate in local activities.
+                Stay updated with local activities, workshops and community programs.
             </p>
 
-            <span style="color:red;font-weight:bold;">
-                Special Offer: Free registration for first 50 participants.
+            <span style="color: yellow; font-weight: bold;">
+                Limited Offer: First 50 registrations are free.
             </span>
         </div>
 
@@ -63,8 +65,8 @@
             <h2 class="highlight">About Our Community</h2>
 
             <p>
-                Our community organizes educational workshops, cultural festivals,
-                food carnivals, volunteer drives and awareness campaigns.
+                Our local community regularly hosts cultural events, educational workshops,
+                volunteer drives and awareness programs to bring residents together.
             </p>
         </section>
 
@@ -72,8 +74,8 @@
 
             <h2>Upcoming Events</h2>
 
-            <ul>
-                <li>Community Music Festival</li>
+            <ul class="event-list">
+                <li>Music Festival</li>
                 <li>Food Carnival</li>
                 <li>Charity Marathon</li>
                 <li>Technology Workshop</li>
@@ -81,77 +83,48 @@
 
         </section>
 
-        <section id="gallery">
+        <!-- Gallery Section -->
+<section id="gallery">
+    <h2>Community Event Gallery</h2>
 
-            <h2>Community Event Gallery</h2>
+    <table class="gallery-table">
 
-            <table class="gallery-table">
+        <tr>
+            <td>
+                <img src="images/image1.jpg" alt="Music Festival" title="Music Festival" class="event-image">
+                <p>Music Festival</p>
+            </td>
 
-                <tr>
+            <td>
+                <img src="images/image2.jpg" alt="Food Carnival" title="Food Carnival" class="event-image">
+                <p>Food Carnival</p>
+            </td>
 
-                    <td>
-                        <img src="images/image1.jpg"
-                            alt="Music Festival"
-                            title="Music Festival"
-                            class="event-image">
+            <td>
+                <img src="images/image3.jpg" alt="Charity Marathon" title="Charity Marathon" class="event-image">
+                <p>Charity Marathon</p>
+            </td>
+        </tr>
 
-                        <p>Music Festival</p>
-                    </td>
+        <tr>
+            <td>
+                <img src="images/image4.jpg" alt="Technology Workshop" title="Technology Workshop" class="event-image">
+                <p>Technology Workshop</p>
+            </td>
 
-                    <td>
-                        <img src="images/image2.jpg"
-                            alt="Food Carnival"
-                            title="Food Carnival"
-                            class="event-image">
+            <td>
+                <img src="images/image5.jpg" alt="Volunteer Drive" title="Volunteer Drive" class="event-image">
+                <p>Volunteer Drive</p>
+            </td>
 
-                        <p>Food Carnival</p>
-                    </td>
+            <td>
+                <img src="images/image6.jpg" alt="Community Meet" title="Community Meet" class="event-image">
+                <p>Community Meet</p>
+            </td>
+        </tr>
 
-                    <td>
-                        <img src="images/image3.jpg"
-                            alt="Charity Marathon"
-                            title="Charity Marathon"
-                            class="event-image">
-
-                        <p>Charity Marathon</p>
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>
-                        <img src="images/image4.jpg"
-                            alt="Workshop"
-                            title="Workshop"
-                            class="event-image">
-
-                        <p>Technology Workshop</p>
-                    </td>
-
-                    <td>
-                        <img src="images/image5.jpg"
-                            alt="Volunteer Drive"
-                            title="Volunteer Drive"
-                            class="event-image">
-
-                        <p>Volunteer Drive</p>
-                    </td>
-
-                    <td>
-                        <img src="images/image6.jpg"
-                            alt="Community Meet"
-                            title="Community Meet"
-                            class="event-image">
-
-                        <p>Community Meet</p>
-                    </td>
-
-                </tr>
-
-            </table>
-
-        </section>
+    </table>
+</section>
 
         <section id="registration">
 
@@ -161,43 +134,34 @@
 
                 <input
                     type="text"
-                    id="name"
                     placeholder="Enter Full Name"
                     required
                     autofocus>
 
                 <input
                     type="email"
-                    id="email"
                     placeholder="Enter Email Address"
                     required>
 
                 <input
                     type="date"
-                    id="date"
                     required>
 
-                <select id="eventType" required>
-
-                    <option value="">
-                        Select Event
-                    </option>
-
+                <select required>
+                    <option value="">Select Event</option>
                     <option>Music Festival</option>
                     <option>Food Carnival</option>
                     <option>Charity Marathon</option>
                     <option>Technology Workshop</option>
-
                 </select>
 
                 <textarea
-                    id="message"
                     rows="5"
-                    placeholder="Enter Additional Message">
+                    placeholder="Additional Message">
                 </textarea>
 
                 <button type="submit">
-                    Register
+                    Register Now
                 </button>
 
                 <output id="confirmation"></output>
@@ -220,7 +184,7 @@
     <!-- Footer -->
 
     <footer>
-        <p>© 2026 Community Event Portal</p>
+        <p>© 2026 Community Event Portal | All Rights Reserved</p>
     </footer>
 
     <script src="script.js"></script>
