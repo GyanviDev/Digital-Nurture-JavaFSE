@@ -1,0 +1,15 @@
+CSS Debugging Notes
+
+1. Open Chrome Developer Tools using F12.
+
+2. Use the Elements tab to inspect HTML.
+
+3. Use the Styles tab to identify applied CSS rules.
+
+4. Check Computed Styles for final property values.
+
+5. Use Device Toolbar to test responsive layouts.
+
+6. Inspect Network tab to verify CSS files are loading correctly.
+
+7. Use Console tab to identify CSS and JavaScript errors.

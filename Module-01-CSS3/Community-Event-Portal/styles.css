@@ -144,3 +144,46 @@ th{
 
     visibility:hidden;
 }
+/* ===================================
+   Multi Column Layout
+=================================== */
+
+.news-columns{
+
+    column-count:2;
+
+    column-gap:30px;
+
+    column-rule:2px solid #1565c0;
+
+    margin-top:15px;
+
+    text-align:justify;
+}
+/* ===================================
+   Responsive Design
+=================================== */
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .news-columns{
+        column-count:1;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+}
