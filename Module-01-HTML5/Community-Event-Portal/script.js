@@ -1,0 +1,1 @@
+console.log("Community Event Portal Loaded");
