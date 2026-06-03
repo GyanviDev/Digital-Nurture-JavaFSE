@@ -1,35 +1,68 @@
 /* ====================================
-   Global Styles
+   Universal Selector
+==================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ====================================
+   Body Styling
 ==================================== */
 
 body{
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family:Arial,sans-serif;
+    background-color:#f4f4f4;
+    padding:20px;
 }
 
-
 /* ====================================
-   Header Styles
+   ID Selector
 ==================================== */
 
-h1{
+#mainHeader{
+    background-color:#003366;
+    color:white;
+    padding:20px;
     text-align:center;
+    margin-bottom:20px;
 }
 
+/* ====================================
+   Element Selector
+==================================== */
+
+h2{
+    color:#007BFF;
+    margin-bottom:10px;
+}
 
 /* ====================================
-   Event Card Styles
+   Class Selector
 ==================================== */
 
 .eventCard{
-    background-color:white;
+    background:white;
     padding:20px;
+    margin-bottom:20px;
     border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
 }
 
+/* ====================================
+   Grouping Selector
+==================================== */
+
+h3,
+p{
+    color:#555;
+    margin-bottom:10px;
+}
 
 /* ====================================
-   Call To Action Button Styles
+   Button Styling
 ==================================== */
 
 .cta-button{
