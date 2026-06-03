@@ -20,9 +20,9 @@ nav{
 }
 
 nav ul{
+    list-style:none;
     display:flex;
     gap:20px;
-    list-style:none;
 }
 
 nav a{
@@ -30,17 +30,85 @@ nav a{
     text-decoration:none;
 }
 
+main{
+    padding:20px;
+}
+
 section{
     background:white;
-    margin:20px;
+    margin-bottom:25px;
     padding:25px;
-    border-radius:10px;
+    border-radius:12px;
     box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
-footer{
+.gallery-table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:20px;
+}
+
+.gallery-table td{
     text-align:center;
+}
+
+.event-image{
+    width:100%;
+    max-width:300px;
+    height:220px;
+
+    object-fit:cover;
+
+    border:4px solid #2563eb;
+    border-radius:12px;
+
+    transition:0.3s;
+}
+
+.event-image:hover{
+    transform:scale(1.05);
+}
+
+.gallery-table p{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+#eventForm{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+#eventForm input,
+#eventForm select,
+#eventForm textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+#eventForm button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#eventForm button:hover{
+    background:#1d4ed8;
+}
+
+#confirmation{
+    color:green;
+    font-weight:bold;
+}
+
+footer{
     background:#111827;
     color:white;
+    text-align:center;
     padding:20px;
 }
